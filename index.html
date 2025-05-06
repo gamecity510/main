@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سپنتا پیکانی | برنامه‌نویس وب</title>
+  <link href="https://fonts.googleapis.com/css?family=Vazirmatn&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #18191a;
+      color: #f3f3f3;
+      font-family: 'Vazirmatn', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 60px 0 20px 0;
+      animation: fadeInDown 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-60px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin: 0 0 10px 0;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #36d1c4, #5b86e5, #b06ab3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 3s linear infinite alternate;
+    }
+    @keyframes gradientMove {
+      0% {background-position: 0%;}
+      100% {background-position: 100%;}
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #bdbdbd;
+      margin-bottom: 40px;
+      font-weight: 400;
+      animation: fadeIn 2s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0;}
+      to { opacity: 1;}
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 50px;
+      animation: fadeIn 2.5s;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 10px 18px;
+      border-radius: 25px;
+      background: rgba(54,209,196,0.08);
+      transition: background 0.3s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    nav a:hover {
+      background: linear-gradient(90deg, #36d1c4, #5b86e5, #b06ab3);
+      color: #fff;
+      transform: scale(1.07) translateY(-2px);
+      box-shadow: 0 4px 24px 0 rgba(91,134,229,0.15);
+    }
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 40px;
+      animation: fadeIn 2.2s;
+    }
+    .socials a {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #232526;
+      color: #36d1c4;
+      font-size: 1.6rem;
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+    }
+    .socials a:hover {
+      background: #36d1c4;
+      color: #232526;
+      transform: scale(1.15) rotate(-10deg);
+    }
+    .portfolio {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin: 40px 0;
+      animation: fadeInUp 1.5s;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(60px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    .card {
+      background: #232526;
+      border-radius: 20px;
+      padding: 28px 24px;
+      min-width: 250px;
+      max-width: 300px;
+      box-shadow: 0 2px 16px 0 rgba(54,209,196,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      animation: floatCard 2.5s infinite alternate;
+    }
+    @keyframes floatCard {
+      0% { transform: translateY(0);}
+      100% { transform: translateY(-10px);}
+    }
+    .card:hover {
+      transform: scale(1.05) translateY(-5px);
+      box-shadow: 0 8px 32px 0 rgba(91,134,229,0.18);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #5b86e5;
+      font-size: 1.2rem;
+    }
+    .contact-btn {
+      display: block;
+      margin: 60px auto 0 auto;
+      padding: 16px 48px;
+      background: linear-gradient(90deg, #36d1c4, #5b86e5, #b06ab3);
+      color: #fff;
+      font-size: 1.15rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 24px 0 rgba(54,209,196,0.18);
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(54,209,196,0.4);}
+      70% { box-shadow: 0 0 0 12px rgba(54,209,196,0);}
+      100% { box-shadow: 0 0 0 0 rgba(54,209,196,0);}
+    }
+    .contact-btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 32px 0 rgba(91,134,229,0.22);
+    }
+    @media (max-width: 700px) {
+      .portfolio { flex-direction: column; align-items: center;}
+      .card { width: 90%; min-width: unset;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>سپنتا پیکانی</h1>
+    <h2>برنامه‌نویس وب | عاشق کدنویسی و طراحی مدرن</h2>
+  </header>
+  <nav>
+    <a href="#about">درباره من</a>
+    <a href="#portfolio">نمونه‌کارها</a>
+    <a href="#contact">تماس</a>
+  </nav>
+  <div class="socials">
+    <a href="#"><span>🐦</span></a>
+    <a href="#"><span>💼</span></a>
+    <a href="#"><span>📷</span></a>
+  </div>
+  <section id="portfolio" class="portfolio">
+    <div class="card">
+      <h3>سایت فروشگاهی مدرن</h3>
+      <p>طراحی ریسپانسیو با React و انیمیشن‌های CSS سفارشی.</p>
+    </div>
+    <div class="card">
+      <h3>پنل ادمین حرفه‌ای</h3>
+      <p>داشبورد با نمودارهای تعاملی و تم دارک، توسعه با Vue.js.</p>
+    </div>
+    <div class="card">
+      <h3>وبلاگ شخصی</h3>
+      <p>سریع، سبک، سئو شده با Next.js و افکت‌های جذاب.</p>
+    </div>
+  </section>
+  <a id="contact" class="contact-btn" href="mailto:sepanta@example.com">ارتباط با من</a>
+</body>
+</html>
